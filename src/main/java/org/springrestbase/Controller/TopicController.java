@@ -17,10 +17,10 @@ public class TopicController {
 
     //"inietto" il servizio che sarà usato dal controller per ottenere delle funzionaità
     //il fatto di annotarlo come Autowired fa si chè sia il framework ad offrirmi un'istanza utilizzabile quando serva ( https://www.tutorialspoint.com/spring/spring_autowired_annotation.htm )
-    //@Autowired
-    //private TopicService topicservice;
+    @Autowired
+    private TopicService topicservice;
 
-
+    //Mappa indirizzo su cui deve rispondere, se il metodo non è specificicato di default è GET
     @RequestMapping("/hello")
     public String hello(){
         return "Hello from topic controller";
@@ -28,11 +28,7 @@ public class TopicController {
 
     @RequestMapping("/topics")
     public List<Topic> all(){
-        return Arrays.asList(
-                new Topic(1,"APIconf","Turin 15/06/2017"),
-                new Topic(2,"NetConference","Milan 23/07/2017"),
-                new Topic(3,"RaveParty","Secret place")
-        );
+        return topicservice.getAllTopics();
     }
 
 }

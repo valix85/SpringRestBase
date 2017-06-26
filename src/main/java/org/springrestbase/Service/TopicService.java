@@ -1,6 +1,10 @@
 package org.springrestbase.Service;
 
 import org.springframework.stereotype.Service;
+import org.springrestbase.Entity.Topic;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Valerio on 26/06/2017.
@@ -9,4 +13,16 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TopicService {
+
+    List<Topic> topics = Arrays.asList(
+            new Topic(1,"APIconf","Turin 15/06/2017"),
+            new Topic(2,"NetConference","Milan 23/07/2017"),
+            new Topic(3,"RaveParty","Secret place")
+    );
+
+    public List<Topic> getAllTopics(){
+        return topics;
+    }
+
+
 }

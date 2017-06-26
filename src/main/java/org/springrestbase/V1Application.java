@@ -3,8 +3,8 @@ package org.springrestbase;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/* STEP 0 */
-/* introduzione */
+/* STEP 2 */
+/* creazione e uso di un service */
 
 @SpringBootApplication
 public class V1Application {
