@@ -53,4 +53,15 @@ public class TopicController {
         topicservice.addTopic(topic);
     }
 
+    //Per eseguire operazioni di aggiornamento in API REST si cambia il metodo http,
+    //da GET a PUT
+    //il metodo è mappato su una rotta già esistente, ma arrivando in PUT farà
+    //altre cose
+    //Per la validazione dei dati specifico in fase di creazione della classe
+    //con le opportune annotazioni
+    @RequestMapping(method = RequestMethod.PUT, value="/topics/{id}")
+    public void updateopic(@RequestBody Topic topic, @PathVariable Integer id){
+        topicservice.updateTopic(id, topic);
+    }
+
 }
