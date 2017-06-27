@@ -24,5 +24,13 @@ public class TopicService {
         return topics;
     }
 
+    public Topic getTopic(Integer id){
+
+        return topics.stream()
+                .filter(t -> t.getId().equals(id))
+                .findFirst()
+                .get();
+    }
+
 
 }
