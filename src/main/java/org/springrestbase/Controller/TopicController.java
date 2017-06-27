@@ -44,4 +44,11 @@ public class TopicController {
         return topicservice.getTopic(id);
     }
 
+    //Per eseguire operazioni di insert in API REST si cambia il metodo http,
+    //da GET a POST
+    @RequestMapping("/topics")
+    public void addTopic(){
+
+    }
+
 }
