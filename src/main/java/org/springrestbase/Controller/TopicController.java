@@ -1,10 +1,8 @@
 package org.springrestbase.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 import org.springrestbase.Entity.Topic;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springrestbase.Service.TopicService;
 
 import java.util.Arrays;
@@ -46,9 +44,13 @@ public class TopicController {
 
     //Per eseguire operazioni di insert in API REST si cambia il metodo http,
     //da GET a POST
-    @RequestMapping("/topics")
-    public void addTopic(){
-
+    //il metodo è mappato su una rotta già esistente, ma arrivando in POST farà
+    //altre cose
+    //Per la validazione dei dati specifico in fase di creazione della classe
+    //con le opportune annotazioni
+    @RequestMapping(method = RequestMethod.POST, value="/topics")
+    public void addTopic(@RequestBody Topic topic){
+        topicservice.addTopic(topic);
     }
 
 }

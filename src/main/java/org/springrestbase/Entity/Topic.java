@@ -1,9 +1,11 @@
 package org.springrestbase.Entity;
 
+
 /**
  * Created by Valerio on 26/06/2017.
  */
 public class Topic {
+
 
     Integer     id;
     String      name;
