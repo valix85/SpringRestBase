@@ -64,5 +64,4 @@ public class TopicController {
         topicservice.updateTopic(id, topic);
     }
 
-
 }
