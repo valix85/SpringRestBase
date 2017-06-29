@@ -47,7 +47,7 @@ public class TopicController {
     //il metodo è mappato su una rotta già esistente, ma arrivando in POST farà
     //altre cose
     //Per la validazione dei dati specifico in fase di creazione della classe
-    //con le opportune annotazioni
+    //con le opportune annotazioni.
     @RequestMapping(method = RequestMethod.POST, value="/topics")
     public void addTopic(@RequestBody Topic topic){
         topicservice.addTopic(topic);
