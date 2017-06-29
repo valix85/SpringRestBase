@@ -64,13 +64,11 @@ public class TopicController {
         topicservice.updateTopic(id, topic);
     }
 
-
     //Per implementare la cancellazione attravero un API REST si usa il metodo
     //del protocollo http chiamato DELETE
-
     @RequestMapping(method = RequestMethod.DELETE, value="/topics/{id}")
-    public void deletetopic(@RequestBody Topic topic, @PathVariable Integer id){
-        topicservice.deleteTopic(id, topic);
+    public void deletetopic(@PathVariable Integer id){
+        topicservice.deleteTopic(id);
     }
 
 }
