@@ -60,7 +60,7 @@ public class TopicController {
     //Per la validazione dei dati specifico in fase di creazione della classe
     //con le opportune annotazioni
     @RequestMapping(method = RequestMethod.PUT, value="/topics/{id}")
-    public void updateopic(@RequestBody Topic topic, @PathVariable Integer id){
+    public void updatetopic(@RequestBody Topic topic, @PathVariable Integer id){
         topicservice.updateTopic(id, topic);
     }
 
