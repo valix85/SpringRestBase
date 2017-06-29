@@ -60,8 +60,17 @@ public class TopicController {
     //Per la validazione dei dati specifico in fase di creazione della classe
     //con le opportune annotazioni
     @RequestMapping(method = RequestMethod.PUT, value="/topics/{id}")
-    public void updateopic(@RequestBody Topic topic, @PathVariable Integer id){
+    public void updatetopic(@RequestBody Topic topic, @PathVariable Integer id){
         topicservice.updateTopic(id, topic);
+    }
+
+
+    //Per implementare la cancellazione attravero un API REST si usa il metodo
+    //del protocollo http chiamato DELETE
+
+    @RequestMapping(method = RequestMethod.DELETE, value="/topics/{id}")
+    public void deletetopic(@RequestBody Topic topic, @PathVariable Integer id){
+        topicservice.deleteTopic(id, topic);
     }
 
 }
