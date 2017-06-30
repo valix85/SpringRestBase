@@ -71,4 +71,8 @@ public class TopicController {
         topicservice.deleteTopic(id);
     }
 
+    /*
+    * Per lo step6 guardare in resources/application.properties
+    * */
+
 }
