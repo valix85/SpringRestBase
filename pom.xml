@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>SpringRestBase</groupId>
-	<artifactId>v1</artifactId>
+	<groupId>org.valix85</groupId>
+	<artifactId>SpringRestBase</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>v1</name>
+	<name>SpringRestBase</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
